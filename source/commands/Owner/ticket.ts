@@ -19,7 +19,7 @@ export class EvalCommand extends Command {
 	public async chatInputRun(interaction: Command.ChatInputInteraction) {
 		await interaction.deferReply()
 		await interaction.channel?.send({ embeds: [new MessageEmbed().setImage('https://i.imgur.com/sPbFfbX.png').setColor('#2f3136')]})
-		await interaction.channel?.send({ embeds: [new Embed().setImage('https://i.imgur.com/p112FgS.png').setTitle('<:chat:1054684650041253949> | Deseja criar um ticket?').setDescription('Para criar um ticket clique no botão abaixo!')], components: [new MessageActionRow().addComponents(new MessageButton({ emoji: '1054684654910832730', style: 'SECONDARY', label: 'Abrir ticket', customId: 'createTicket'}))]})
+		await interaction.channel?.send({ embeds: [new Embed().setImage('https://i.imgur.com/p112FgS.png').setTitle('<:chat:1054684650041253949> | Deseja criar um ticket?').setDescription('Para criar um ticket clique no botão abaixo!')], components: [new MessageActionRow().addComponents(new MessageButton({ style: 'SUCCESS', label: 'Abrir ticket', customId: 'createTicket'}))]})
 		await interaction.deleteReply()
 	}
 }
