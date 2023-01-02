@@ -9,7 +9,7 @@ export class InteractionCreateListener extends Listener {
     if(i.channel?.type !== 'GUILD_TEXT') return
     let thread = await i.channel.threads.create({
       name: i.user.id,
-      type: 'GUILD_PRIVATE_THREAD',
+      type: 'GUILD_PUBLIC_THREAD',
       autoArchiveDuration: 'MAX',
       invitable: false,
     })
